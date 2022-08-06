@@ -73,7 +73,7 @@ func GenerateMulSubCommand(o *options.Options) *cobra.Command {
 func GenerateDivSubCommand(o *options.Options) *cobra.Command {
 	var precision int
 	divCmd := &cobra.Command{
-		Use: "mul",
+		Use: "div",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			tmpFormat := fmt.Sprintf("result: %%.%df", precision)
 			fmt.Printf(tmpFormat, float64(o.ArgOne)/float64(o.ArgTwo))
