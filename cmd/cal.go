@@ -9,6 +9,7 @@ import (
 
 func GenerateCalCmd() *cobra.Command {
 	o := &options.Options{}
+	fs := o.InitFlagSet()
 
 	rootCmd := &cobra.Command{
 		Use: "cal [subCommand] arg1 arg2 [options]",
@@ -24,8 +25,7 @@ hurry to try it!`,
 		},
 	}
 
-	rootCmd.PersistentFlags().IntVar(&o.ArgOne, "argone", 0, "assign a value to arg1")
-	rootCmd.PersistentFlags().IntVar(&o.ArgTwo, "argtwo", 0, "assign a value to arg2")
+	rootCmd.PersistentFlags().AddFlagSet(fs)
 
 	rootCmd.AddCommand(GenerateAddSubCommand(o))
 	rootCmd.AddCommand(GenerateSubSubCommand(o))
