@@ -11,6 +11,8 @@ cal 是一个实现了加减乘除的命令行计算器，它使用四个子命�
 
 `cal`的`div`子命令包含一个独有的参数`--precision`或`-p`来指示结果保留小数点后几位
 
+具体的cobra使用方法参考总结：[cobra.md](https://github.com/DaoiestFire/Go-learning-summary/blob/main/cobra.md)
+
 # Structure
 ```
 │  go.mod
