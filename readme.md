@@ -16,7 +16,6 @@ cal 是一个实现了加减乘除的命令行计算器，它使用四个子命�
 # Structure
 ```
 │  go.mod
-│  go.sum
 │  main.go                       //main函数入口，实例化rootCmd并启动
 │  readme.md
 │
