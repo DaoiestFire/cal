@@ -23,3 +23,15 @@ hurry to try it!`,
 
 	return rootCmd
 }
+
+func GenerateAddSubCommand() *cobra.Command {
+	addCmd := &cobra.Command{
+		Use: "add",
+		RunE: func(cmd *cobra.Command, args []string) error {
+
+			return nil
+		},
+	}
+
+	return addCmd
+}
